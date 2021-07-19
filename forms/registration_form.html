@@ -9,62 +9,60 @@
 </head>
 <body>
     <h1 class="main-header">Registration Form</h1>
-
     <div class="form-wrap">
         <form action="#" method="post">
             <div class="form-block">
                 <label class="form-label" for="first_name">First Name: *</label>
-                <input class="form-input" type="text" name="first_name">
+                <input class="form-input" type="text" name="first_name" id="first_name">
             </div>
-
             <div class="form-block">
                 <label class="form-label" for="last_name">Last Name: *</label>
-                <input class ="form-input" type="text" name="last_name">
+                <input class ="form-input" type="text" name="last_name" id="last_name">
             </div>
 
             <div class="form-block">
                 <label class="form-label" for="email">Email: *</label>
-                <input class ="form-input" type="email" name="email">
+                <input class ="form-input" type="email" name="email" id="email">
             </div>
 
             <div class="form-block">
                 <label class="form-label" for="password">Password: *</label>
-                <input class ="form-input" type="password" name="password">
+                <input class ="form-input" type="password" name="password" id="password">
             </div>
 
             <div class="form-block">
                 <label class="form-label" for="conf-password">Confirm Password: *</label>
-                <input class ="form-input" type="password" name="conf-password">
+                <input class ="form-input" type="password" name="conf-password" id="conf-password">
             </div>
 
             <div class="form-block">
                 <label class="form-label" for="dob">DOB:</label>
-                <input type="date" name="dob">
+                <input type="date" name="dob" id="dob">
             </div>
             
             <div class="form-block">
                 <h3>Gender Identity:</h3>
-                <label for="male">Male<label>
-                <input type="radio" name="font" value="male" id="bold">
+                <label for="male">Male</label>
+                <input type="radio" name="male" value="male" id="male">
                 
-                <label for="female">Female<label>
-                <input type="radio" name="female" value="female" >
+                <label for="female">Female</label>
+                <input type="radio" name="female" value="female" id="female" >
 
-                <label for="non-binary">Non-Binary<label>
-                <input type="radio" name="font" value="non-binary" >
+                <label for="non-binary">Non-Binary</label>
+                <input type="radio" name="non-binary" value="non-binary" id="non-binary">
 
-                <label for="prefer">Prefer Not To Say<label>
-                <input type="radio" name="prefer" value="prefer not to say" >
+                <label for="prefer">Prefer Not To Say</label>
+                <input type="radio" name="prefer" value="prefer not to say" id="prefer" >
             </div>
 
             <div class="form-block">
                 <label class="form-label" for="desc">Short Description About Myself:</label>
-                <textarea name="desc" cols="40" rows="5"></textarea>
+                <textarea name="desc" cols="40" rows="5" id="desc"></textarea>
             </div>
 
             <div class="form-block">
                 <label class="form-label" for="lang">Favorite Language</label>
-                <select class="form-input" name="lang">
+                <select class="form-input" name="lang" id="lang">
                     <option>Python</option>
                     <option>Rust</option>
                     <option>Javascript</option>
@@ -73,8 +71,8 @@
             </div>
 
             <div class="form-block">
-                <input type="checkbox" name="subscription" id="accept">
                 <label class="form-label" for="subscription">Yes, I I would like to receive email updates and offers.</label>
+                <input type="checkbox" name="subscription" id="subscription">
 
             </div>
 
