@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="main-header">Registration Form</h1>
+
+    <div class="form-wrap">
+        <form action="#" method="post">
+            <div class="form-block">
+                <label class="form-label" for="first_name">First Name: *</label>
+                <input class="form-input" type="text" name="first_name">
+            </div>
+
+            <div class="form-block">
+                <label class="form-label" for="last_name">Last Name: *</label>
+                <input class ="form-input" type="text" name="last_name">
+            </div>
+
+            <div class="form-block">
+                <label class="form-label" for="email">Email: *</label>
+                <input class ="form-input" type="email" name="email">
+            </div>
+
+            <div class="form-block">
+                <label class="form-label" for="password">Password: *</label>
+                <input class ="form-input" type="password" name="password">
+            </div>
+
+            <div class="form-block">
+                <label class="form-label" for="conf-password">Confirm Password: *</label>
+                <input class ="form-input" type="password" name="conf-password">
+            </div>
+
+            <div class="form-block">
+                <label class="form-label" for="dob">DOB:</label>
+                <input type="date" name="dob">
+            </div>
+            
+            <div class="form-block">
+                <h3>Gender Identity:</h3>
+                <label for="male">Male<label>
+                <input type="radio" name="font" value="male" id="bold">
+                
+                <label for="female">Female<label>
+                <input type="radio" name="female" value="female" >
+
+                <label for="non-binary">Non-Binary<label>
+                <input type="radio" name="font" value="non-binary" >
+
+                <label for="prefer">Prefer Not To Say<label>
+                <input type="radio" name="prefer" value="prefer not to say" >
+            </div>
+
+            <div class="form-block">
+                <label class="form-label" for="desc">Short Description About Myself:</label>
+                <textarea name="desc" cols="40" rows="5"></textarea>
+            </div>
+
+            <div class="form-block">
+                <label class="form-label" for="lang">Favorite Language</label>
+                <select class="form-input" name="lang">
+                    <option>Python</option>
+                    <option>Rust</option>
+                    <option>Javascript</option>
+                    <option>Objective C</option>
+                </select>
+            </div>
+
+            <div class="form-block">
+                <input type="checkbox" name="subscription" id="accept">
+                <label class="form-label" for="subscription">Yes, I I would like to receive email updates and offers.</label>
+
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="Create Account" >
+            </div>
+
+            <p>* Indicates a required field</p>
+
+        </form>
+    </div>
+</body>
+</html>

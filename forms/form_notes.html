@@ -1,0 +1,57 @@
+<!-- Text Input -->
+<input type="text" name="first_name">
+
+<!-- Number Input -->
+<input type="number" name="age">
+
+<!-- Password Input -->
+<input type="password" name="password">
+
+<!-- Date Input -->
+<input type="date" name="dob">
+
+<!-- Color Input -->
+<input type="color" name="text_color">
+
+<!-- Radio Input -->
+<input type="radio" name="font" value="bold" id="bold">
+<label for="bold"><strong>Bold</strong><label>
+<input type="radio" name="font" value="normal" id="normal">
+<label for="normal">Normal<label>
+
+<!-- Checkbox Input -->
+<input type="checkbox" name="accept" id="accept">
+<label for="accept">I agree<label>
+
+<!-- Textarea Input-->
+<textarea name="comment" cols="20" rows="3"></textarea>
+
+<!-- Select Input -->
+<select name="snack">
+    <option>Almonds</option>
+    <option>Cheese and Crackers</option>
+    <option>Pita and Hummus</option>
+    <option>Pears</option>
+</select>
+
+
+<!-- A Typical Form -->
+<form action="/process" method="post">
+    <div>
+        <label>Name: </label>
+        <input type="text" name="name" 
+        placeholder="Your name..." >
+    </div>
+    <div>
+        <label>Email: </label>
+        <input type="text" name="email" 
+        placeholder="Your email..." >
+    </div>
+    <div>
+        <input type="checkbox" name="offers" 
+        id="offers" checked >
+        <label for="offers">I would like 
+        to receive email offers!</label>
+    </div>
+    <input type="submit" value="Sign Up!" >
+</form>

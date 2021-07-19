@@ -1,0 +1,11 @@
+.form-block {
+    padding: 10px;
+}
+
+textarea {
+    display: block;
+}
+
+span {
+    margin-top: 10px;
+}
