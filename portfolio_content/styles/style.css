@@ -8,3 +8,7 @@
     flex-direction: column;
     width: 50%;
 }
+
+table,td,th {
+    border: 1px solid black;
+}
