@@ -1,0 +1,27 @@
+.search {
+    background: white;
+    color: cyan;
+    border: 2px solid aqua;
+    border-radius: 1em;
+    display: block;
+    padding: 5px;
+    width: 10em;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.add {
+    border-radius: 50%;
+    background: #20c997;
+    color: white;
+    display: block;
+    margin: 10px;
+}
+
+.create {
+    background: #007bff;
+    box-shadow: 2px 2px 2px black;
+    color: white;
+    display: block;
+    margin: 10px;
+}
