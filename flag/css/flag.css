@@ -1,0 +1,21 @@
+* {
+  margin:0px;
+}
+.stripes-red {
+  background:red;
+  height: 50px;
+  width:800px;
+}
+.stripes {
+  height: 50px;
+  width: 800px;
+}
+
+.blue{
+    height: 265px;
+    width: 475px;
+    background-color: darkblue;
+    display: inline-block;
+    color: white;
+    justify-content: space-around;
+}

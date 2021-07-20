@@ -1,0 +1,54 @@
+/* CSS RESET */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    padding: 50px;
+}
+
+.container{
+    background-color:white;
+    height: 553px;
+    width: 1280px;
+    outline: 1px solid black;
+    display: block;
+}
+
+.blue{
+    height: 265px;
+    width: 475px;
+    background-color: darkblue;
+    display: inline-block;
+    color: white;
+    justify-content: space-around;
+}
+
+span{
+    font-size: 2.5rem;
+    content: "\2606";
+}
+
+.row-1{
+    justify-content: space-evenly;
+    display: inline-block;
+}
+
+.sRed{
+    height: 50px;
+    width: 800px;
+    background-color: red;
+    margin-bottom: 22px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.lRed{
+    height: 50px;
+    width: 1279px;
+    background-color: red;
+    margin-bottom: 22px;
+    margin-top: 22px;
+}
