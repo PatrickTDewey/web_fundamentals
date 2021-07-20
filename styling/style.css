@@ -1,0 +1,19 @@
+h1{
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+span {
+    color: #17a2b8;
+}
+h2 {
+    background-color: #6f42c1;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+h3 {
+    background-color: paleturquoise;
+    padding: 5px;
+    text-align: right;
+}
