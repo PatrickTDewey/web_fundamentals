@@ -1,0 +1,57 @@
+/* selector -> property */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+body {
+    background:wheat;
+    /* top right bottom left */
+    padding:0px 20px;
+}
+.container {
+    background: black;
+    color: whitesmoke;
+}
+header {
+    background: tomato;
+}
+header img {
+    width: 70px;
+}
+header h1 {
+    display: inline-block;
+    margin-left: 90px;
+}
+nav {
+    text-align: center;
+    font-size: 2rem;
+}
+nav ul li {
+    
+    display: inline-block;
+    padding: 5px;
+}
+nav ul {
+    list-style: none;
+}
+nav a {
+    color: cyan;
+    text-decoration: none;
+}
+div.pizza-add img {
+    width: 200px;
+}
+main {
+    text-align: center;
+    padding: 20px 0px;
+    background: cornflowerblue;
+}
+.pizza-add {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+footer {
+    text-align: center;
+}
