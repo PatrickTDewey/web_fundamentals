@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+}
+.container {
+  background: #D6BBC0;
+  padding: 0px 20px;
+  margin:auto;
+  width:960px;
+}
+header {
+  background: #4059AD;
+  color: whitesmoke;
+  text-align: center;
+}
+main img {
+  height: 200px;
+}
+.flex-it {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.cat-gallery-1 {
+  background: #343633;
+}
+.cat-gallery-2 {
+  background: #5CC8FF;
+}
+.cat-gallery-3 {
+  background: #4059AD;
+}
+footer {
+  background: #4059AD;
+  color: whitesmoke;
+  text-align: center;
+}
