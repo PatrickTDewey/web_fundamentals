@@ -8,6 +8,7 @@
     width: 10em;
     font-weight: bold;
     margin: 10px;
+    font-size: 1.5em;
 }
 
 .add {
@@ -16,12 +17,16 @@
     color: white;
     display: block;
     margin: 10px;
+    width: 50px;
+    font-size: 30px;
+    font-weight: 600;
 }
-
 .create {
     background: #007bff;
     box-shadow: 2px 2px 2px black;
     color: white;
     display: block;
     margin: 10px;
+    font-size: 24px;
+    padding: 5px;
 }
