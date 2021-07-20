@@ -15,9 +15,13 @@ body {
 }
 header {
     background: tomato;
+    text-align: center;
 }
 header img {
-    width: 70px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 39px;
 }
 header h1 {
     display: inline-block;
