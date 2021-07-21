@@ -7,14 +7,17 @@
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
+    
 }
 .nav-title {
     font-size: 32px;
+    flex: 1;
 }
 .nav-links {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex: 4;
     
 }
 .nav ul {

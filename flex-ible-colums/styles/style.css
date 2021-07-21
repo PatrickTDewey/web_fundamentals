@@ -1,0 +1,28 @@
+.row {
+    display: flex;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+.col, .col-1 {
+    background-color:#70A288;
+    color: white;
+    margin: 10px;
+    padding: 35px;
+}
+.col-1 {
+    flex: 1;
+}
+.col-third {
+    flex:1;
+}
+.col-two-thirds {
+    flex: 2;
+}
+
+.col-two-fifths {
+    flex: 2;
+}
+.col-three-fifths {
+    flex: 3;
+}
