@@ -1,0 +1,189 @@
+*{
+    font-family: monospace;
+}
+
+
+/* Navbar css */
+
+.new-nav {
+    background: #494949;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    display: inline-block;
+}
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 3px;
+}
+.nav-link a:hover {
+    color: #FF5D73;
+    text-decoration: underline;
+}
+
+.new-nav button {
+    background: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.new-nav button:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: .05s ease-in-out;
+}
+/* END Navbar CSS */
+
+
+/* User Card CSS */
+.user-card {
+    background: linear-gradient(180deg, rgba(73,73,73,1) 30%, rgba(255,255,255,1) 30%);
+    height: 300px;
+    border: 1px solid #4D5382;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+.card-item{
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+
+.account-logo {
+    color: #4D5382;
+    position: absolute;
+    top: 150px;
+    left: 140px;
+    font-size: 66px;
+    background: white;
+    border-radius: 50%;
+}
+
+.blue, .blue a  {
+    color: #4D5382 ;
+    text-decoration: none;
+}
+/* END User Card CSS */
+
+
+/* Main Flex CSS */
+.main-flex {
+    display: flex;
+    padding: 30px 60px;
+}
+/* END Left-col CSS */
+
+/* Left-col CSS */
+
+.left-col{
+    flex: 2;
+    margin: 0px 10px;
+}
+/* END Left-col CSS */
+
+/* Right-col CSS */
+.right-col {
+    flex: 1;
+    margin: 0px 10px;
+}
+/* END Right-col CSS */
+
+/* Education CSS */
+.education {
+    border: 1px solid #4D5382;
+    margin-top: 20px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+
+.education h4 {
+    text-align: center;
+    padding: 10px;
+    margin-top:0px;
+}
+
+/* END Education CSS */
+
+/* Request CSS */
+
+.request {
+    border: 1px solid #4D5382;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+
+/* END Request CSS */
+
+/* Connections CSS */
+.connections {
+    border: 1px solid #4D5382;
+    box-shadow: 1px 1px 3px 1px black;
+}
+
+/* END Connections CSS */
+
+/* Pink Div CSS */
+.pink-div {
+    background: rgba(255,93,115,1);
+    text-align: center;
+    font-weight: 600;
+
+}
+.pink-div h3{
+    margin-top: 0px;
+    padding: 30px;
+}
+
+/* END Pink Div CSS */
+
+
+/* Side-pad CSS */
+.side-pad {
+    padding:0 40px
+}
+/* END Side-pad */
+
+/* Connect-1 CSS */
+.connect-1 {
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.connect-1 h5{
+    display: inline-block;
+}
+/* END Connect-1 */
+
+/* Connection-req CSS */
+.connection-req {
+    text-align: center;
+}
+/* END Connection-req  */
+
+
+/* connection-list css */
+.connection-list{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.connection-list i{
+    padding: 15px;
+}
