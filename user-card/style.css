@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+.user-card {
+    background: linear-gradient(180deg, rgba(241,214,184,1) 30%, rgba(255,255,255,1) 30%);
+    height: 300px;
+    width: 600px;
+    border: 1px solid #4D5382;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.card-item{
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+
+.account-logo {
+    color: #4D5382;
+    position: absolute;
+    top: 55px;
+    left: 30px;
+    font-size: 66px;
+    background: white;
+    border-radius: 50%;
+}
+
+.blue, .blue a  {
+    color: #4D5382 ;
+    text-decoration: none;
+}
