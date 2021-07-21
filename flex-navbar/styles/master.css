@@ -2,8 +2,8 @@
     font-family: monospace;
 }
 .nav {
-    color: #F7C4A5;
-    background: #463239 ;
+    color: white;
+    background: #080808 ;
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
