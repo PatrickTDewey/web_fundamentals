@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a website made with a grid style layout about Ninjitsu, proceed with caution traveler.">
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Dojonary</title>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <h1 class="nav-title">Dojonary</h1>
+        </div>
+        <form class="middle" action="#" method="get">
+            <input placeholder="Search" class="nav-item nav-search" type="search" results="0">
+            <i class="fas fa-search"></i>
+        </form>
+        <div class="right">
+            <button class="nav-item nav-button" onclick="logout(this)">Login</button>
+            
+        </div>
+    </nav>
+
+    <main class="main-grid">
+        <article class="article-1">
+            <div class="article-left">
+                <h3>Ninja</h3>
+                <h5>noun</h5>
+                <p>Plural:Ninjas</p>
+                <button class="article-button" onclick="(alert(`Ninja was liked!`))">13 Likes</button>
+            </div>
+            <div class="article-right">
+                <p class="right-p">A General practitioner skilled in the <a class="p-link"href="#">Japanese</a>  art of <a class="p-link"href="#">Ninjitsu</a></p>
+            </div>
+        </article>
+        <article class="article-2">
+            <div class="article-left">
+                <h3>Ninja</h3>
+                <h5>noun</h5>
+                <p>Plural:Ninjas</p>
+                <button class="article-button" onclick="alert('Ninja was liked!')">20 Likes</button>
+            </div>
+            <div class="article-right">
+                <p class="right-p">A <a class="p-link"href="#">Programmer</a> that breaks down problems with <a class="p-link"href="#">Zen</a> like focus</p>
+            </div>
+        </article>
+        <article class="article-3">
+                <h2>Dojonary is defined by<strong>YOU</strong></h2>
+                <button class="article-button" onclick="removeElement(this)">Add Definition</button>
+        </article>
+    </main>
+</body>
+</html>
