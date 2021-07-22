@@ -1,5 +1,9 @@
 function logout(e) {
-    e.innerText = 'Logout';
+    if (e.innerText === `Login`) {
+        e.innerText = 'Logout';
+    } else {
+        e.innerText = `Login`;
+    }
 }
 
 function removeElement(e) {
