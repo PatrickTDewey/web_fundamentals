@@ -14,3 +14,11 @@ function turnOff(e){
 function removedElement(e) {
     e.remove();
 }
+
+function over(e) {
+    alert('mouseover');
+}
+
+function out(e) {
+    alert('mouseout')
+}
