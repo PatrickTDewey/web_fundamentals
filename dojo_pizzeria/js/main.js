@@ -22,11 +22,18 @@ let pizza3 = pizzaOven('pan', 'marinara', ['mozzerlla', 'feta', 'blue'], ['pinea
 
 
 let crusts = ['flat', 'deep dish', 'pan', 'stuffed'];
-let sauces = ['marinara', 'alfredo', 'olive oil', 'stuffed'];
+let sauces = ['marinara', 'alfredo', 'olive oil', 'thirty year old fish sauce'];
 let cheeses = ['mozzerlla', 'parmesean', 'feta', 'blue', 'asiago'];
 let toppings = ['chicken', 'canadian bacon', 'ham', 'sausage', 'pepporni', 'pineapple', 'basil'];
 
 function randomIndex(arr){
+    let randomIndice = arr[Math.floor((Math.random() * arr.length))];
+    return randomIndice;
     
 }
-randomIndex(crusts);
+// console.log(randomIndex(crusts));
+
+let randomPizza = pizzaOven(randomIndex(crusts),randomIndex(sauces),randomIndex(cheeses), randomIndex(toppings));
+console.log(randomPizza);
+
+
