@@ -13,13 +13,9 @@ function pizzaOven(crustType, sauceType, cheese, toppings) {
     };
     return pizza;
 }
-let pizza1 = pizzaOven('flat', 'marinara', ['mozzerlla'], ['pepporoni']);
-let pizza2 = pizzaOven('deep dish', 'alfredo', ['mozzerlla', 'parmesean',], ['chicken']);
-let pizza3 = pizzaOven('pan', 'marinara', ['mozzerlla', 'feta', 'blue'], ['pineapple', 'canadian bacon']);
 // pizza1.getIngredients();
 // pizza2.getIngredients();
 // pizza3.getIngredients();
-
 
 let crusts = ['flat', 'deep dish', 'pan', 'stuffed'];
 let sauces = ['marinara', 'alfredo', 'olive oil', 'thirty year old fish sauce'];
@@ -36,4 +32,5 @@ function randomIndex(arr){
 let randomPizza = pizzaOven(randomIndex(crusts),randomIndex(sauces),randomIndex(cheeses), randomIndex(toppings));
 console.log(randomPizza);
 
+// randomPizza.getIngredients()
 

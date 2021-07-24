@@ -1,0 +1,62 @@
+/* Header CSS */
+header {
+    background: #222222;
+    padding: 1vw;
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 4px 2px black;
+}
+/* END Header CSS */
+
+/* Main CSS */
+main {
+    display: grid;
+    grid-template-rows: 80px 1fr ;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-gap: 20px;
+}
+.main-header {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: center;
+}
+.left-col{
+    grid-column-start:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row-start: 2;
+    background: #222222;
+    color: white;
+    border-radius: 5px;
+}
+.column-card {
+    grid-column-start: 3;
+    background: #222222;
+    color: white;
+    padding: 20px;
+    border-radius:5px;
+    box-shadow:1px 2px 1px 1px black;
+}
+.user-img{
+    width: 150px;
+    height: 150px;
+
+}
+.user-link {
+    color: white;
+}
+button {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background: #D5896F;
+    color: whitesmoke;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+button:hover{
+    background: whitesmoke;
+    color:  #D5896F;
+    cursor: pointer;
+}
+
