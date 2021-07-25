@@ -51,7 +51,7 @@
 
 /* User Card CSS */
 .user-card {
-    background: linear-gradient(180deg, rgba(73,73,73,1) 30%, rgba(255,255,255,1) 30%);
+    background: linear-gradient(180deg, rgba(73,73,73,1) 20%, rgba(255,255,255,1) 20%);
     height: 300px;
     border: 1px solid #4D5382;
     display: flex;
@@ -69,9 +69,9 @@
 .account-logo {
     color: #4D5382;
     position: absolute;
-    top: 150px;
+    top: 125px;
     left: 140px;
-    font-size: 66px;
+    font-size: 48px;
     background: white;
     border-radius: 50%;
 }
@@ -143,11 +143,15 @@
     background: rgba(255,93,115,1);
     text-align: center;
     font-weight: 600;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+
 
 }
 .pink-div h3{
-    margin-top: 0px;
-    padding: 30px;
+    margin: 0px;
 }
 
 /* END Pink Div CSS */
@@ -187,3 +191,25 @@
 .connection-list i{
     padding: 15px;
 }
+
+
+/* Change-color CSS */
+
+.change-color {
+    background: black;
+    color: white;
+    transition: 300ms ease-in-out;
+}
+
+.white-text {
+    color: white;
+    margin: 5px;
+}
+
+
+.circle {
+    background: #222;
+    padding: 1.1rem;
+    color: white;
+    border-radius: 50%;
+    }
