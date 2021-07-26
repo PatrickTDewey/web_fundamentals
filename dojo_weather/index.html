@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <title>Dojo Weather</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <h1 class="nav-title">DojoWeather</h1>
+            <ul class="nav-ul">
+                <li class="nav-link" onclick="loadingReport()"><a href="#">Burbank</a></li>
+                <li class="nav-link" onclick="loadingReport()"><a href="#" class="active">Chicago</a></li>
+                <li class="nav-link" onclick="loadingReport()"><a href="#">Dallas</a></li>
+            </ul>
+        </nav>
+        <div class="first-row">
+            <h2 class="weather-header">San Jose</h2>
+            <div class="right-head">
+                <p class="show-temp-p">show temperature in</p>
+                <form action="#">
+                    <select name="temperature" id="celsius-faren" onchange="convertTemp(this)">
+                        <option value="celsius">C&deg;</option>
+                        <option value="farenheit">F&deg;</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        
+        <main class="main-grid">
+            <article class="weather-card" id="first-card">
+                <h3 class="weather-card-h">Today</h3>
+                <img src="./assets/some_rain.png" alt="rainy" class="weather-card-img">
+                <p class="weather-card-p">some rain</p>
+                <div class="flex-weather">
+                    <strong class="red-text degree">26</strong>
+                    <strong class="blue-text degree">21</strong>
+                </div>
+            </article>
+            <article class="weather-card" id="second-card">
+                <h3 class="weather-card-h">Tomorrow</h3>
+                <img src="./assets/some_sun.png" alt="sunny" class="weather-card-img">
+                <p class="weather-card-p">some sun</p>
+                <div class="flex-weather">
+                    <strong class="red-text degree">21</strong>
+                    <strong class="blue-text degree">16</strong>
+                </div>
+            </article>
+            <article class="weather-card" id="third-card">
+                <h3 class="weather-card-h">Friday</h3>
+                <img src="./assets/some_clouds.png" alt="cloudy" class="weather-card-img">
+                <p class="weather-card-p">some clouds</p>
+                <div class="flex-weather">
+                    <strong class="red-text degree">27</strong>
+                    <strong class="blue-text degree">19</strong>
+                </div>
+            </article>
+            <article class="weather-card" id="fourth-card">
+                <h3 class="weather-card-h">Saturday</h3>
+                <img src="./assets/some_sun.png" alt="sunny" class="weather-card-img">
+                <p class="weather-card-p">some sun</p>
+                <div class="flex-weather">
+                    <strong class="red-text degree">24</strong>
+                    <strong class="blue-text degree">18</strong>
+                </div>
+            </article>
+        </main>
+        <aside class="cookie-policy">
+            <img src="./assets/cookie.png" alt="cookie">
+            <div class="cookie-left">
+                <h3 class="cookie-header">Stop! Cookie Time</h3>
+                <p class="cookie-p">We use cookies (sadly not the edile ones) to personalize content and ads to provide social media feature and to analyze our traffic. <a href="#" class="cookie-a">Read more...</a></p>
+            </div>
+            <div class="cookie-right">
+                <button class="cookie-button" onclick="hide()">I Accept</button>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

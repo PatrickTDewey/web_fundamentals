@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
     <link rel="stylesheet" href="./styles/style.css">
     <title>Javascript</title>
 </head>
@@ -17,6 +17,20 @@
 
     <button onclick="removedElement(this)">Click to remove</button>
 
-    <div class="block" onmouseover="over(this)" onmouseout="out(this)"></div>
+    <!-- <div class="block" onmouseover="over(this)" onmouseout="out(this)"></div> -->
+    <h1>OnInput | Example</h1>
+    <p>Hello, my name is <span id="name"></span></p>
+    <form action="" method="post">        
+        <label for="input-text">This label</label>
+        <input placeholder="Your name here"type="text" name="input" id="input-text" oninput="setName(this)">
+    </form>
+    <br>
+    <h2>OnChange | Example</h2>
+    <select name="food" id="food-select" onchange="pickFood(this)">
+        <option value="pizza">pizza</option>
+        <option value="sushi">sushi</option>
+        <option value="seaweed">seaweed</option>
+    </select>
+    <button onclick="orderFood()">Order Food</button>
 </body>
 </html>

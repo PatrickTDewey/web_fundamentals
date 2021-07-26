@@ -12,3 +12,44 @@ button:hover{
     color:  #D5896F;
 }
 
+/* Navbar css */
+
+nav {
+    background: #494949;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.nav-link {
+    display: inline-block;
+}
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 3px;
+}
+.nav-link a:hover {
+    color: #FF5D73;
+    text-decoration: underline;
+}
+
+nav button {
+    background: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: .05s ease-in-out;
+}
+/* end nav css */
