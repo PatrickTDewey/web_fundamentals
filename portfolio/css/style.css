@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Navbar css */
+
+.main-menu {
+    background: #494949;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+/* Mobile Nav */
+#mobile-nav {
+    text-align: center;
+    background-color: #494949;
+    padding: 20px 0px;
+    list-style: none;
+}
+.animate{
+    animation-duration: 1000ms;
+    animation-name: slide-down;
+}
+@keyframes slide-down {
+    from {
+        margin-left:100%;
+        width: 150%;
+        
+
+    }
+    to {
+        margin-left:0%;
+        width: 100%;
+    }
+    
+}
+.mobile-li {
+    padding: 10px 0px;
+}
+.mobile-li a{
+    
+    text-decoration: none;
+    color: white;
+}
+.display-none {
+    display: none;
+    
+}
+/* Desktop Nav */
+.desktop-nav {
+    display: flex;
+}
+.desktop-li {
+    margin-right: 10px;
+    list-style: none;
+}
+.desktop-a {
+    color: white;
+    text-decoration: white;
+}
+/* End Navbar CSS */
+
+/* Hero styling */
+.hero {
+    background-image: url("../assets/nate-grant-QQ9LainS6tI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vw;
+    display: flex;
+    align-items: center;
+}
+.hero h2 {
+    color: white;
+    text-shadow: 2px 3px black;
+    margin-left: 15px;
+    font-family: monospace;
+}
+
+/* media queries */
+@media screen and (max-width: 250px) {
+    /* move menu button on extremely small screen */
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    
+}
+@media screen and (min-width: 700px) {
+    .right-mobile-icon, #mobile-nav, .mobile-li {
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    .desktop-nav {
+        display: none;
+    }
+}

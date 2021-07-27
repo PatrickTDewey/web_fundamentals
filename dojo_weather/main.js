@@ -8,6 +8,7 @@ function hide() {
 }
 
 let degreeArr = document.getElementsByClassName('degree');
+
 function convertTemp(e) {
     switch (e.value) {
         case 'celsius':

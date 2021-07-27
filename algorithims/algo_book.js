@@ -191,30 +191,64 @@ function generateCoinChange(cents) {
 Statistics to Doubles
 Implement a ‘die’ that randomly returns an integer between 1 and 6 inclusive. Roll a pair of these dice, tracking the statistics until doubles are rolled. Display the​ number of rolls​ ,​min,​ ​max,​ and ​average​.
 */
-
-function die(minimum, maximum){
-    // accounts for wanting to return an integer value using ceil and floor methods
-    let min = Math.ceil(minimum), max = Math.floor(maximum);
-    return Math.floor(Math.random() * (max - min) + min);
+function die(max) {
+    let roll = Math.ceil(Math.random() * max);
+    return roll;
 }
 
-let rolldie1 = die(1, 7);
-let rolldie2 = die(1, 7);
+let stats = {
+    'rolls': 1,
+    'values': [],
+    'min': function() {
+        let min = this.values[0];
+        for (let index = 0; index < this.values.length; index++) {
+            if (this.values[index] < min) {
+                min = this.values[index];
+            }
+        }
+        return min;
+    },
+    'max': function() {
+        let max = this.values[0];
+        for (let index = 0; index < this.values.length; index++) {
+            if (this.values[index] > max) {
+                max = this.values[index];
+            }
+        }
+        return max;
+    },
+    'average': function() {
+        let average = 0
+        for (let index = 0; index < this.values.length; index++) {
+            average += this.values[index][0];
+            average += this.values[index][1];
+        }
+        average = (average / (this.values.length * 2));
+        return average;
+    }
+};
 
-// function rollDice() {
-//     let rolls = 1;
-//     rollsArray = [rolls, [rolldie1, rolldie2]]
-//     console.log(rolldie1, rolldie2);
-//     while(rolldie1 != rolldie2) {
-//         rolldie1 = die(1,7);
-//         rolldie2 = die(1,7);
-//         rolls++;
-//         rollsArray[1].push([rolldie1,rolldie2])
-//         console.log(rolldie1,rolldie2);
-//     }
-//     console.log(`Rolls: ${rollsArray[0]} Dice Data: ${rollsArray[1]}`);
-//     return rolls;
+function checkValue(value1, value2) {
+    switch (value1 == value2) {
+        case true:
+            stats.values.push([value1, value2]);
+            break;
+        case false:
+            stats.values.push([value1, value2])
+            stats.rolls += 1;
+            // console.log(stats.values);
+            // console.log(stats.rolls);
+            checkValue(die(6), die(6));
+            break;
+    }
+    return stats;
+}
 
+let gameOne = checkValue(die(6), die(6));
+console.log(gameOne);
+console.log(`Rolls: ${gameOne.rolls}, Min: ${gameOne.min()}, Max: ${gameOne.max()}, Average: ${gameOne.average()}`);
+console.log('Rolls: ' + gameOne.rolls );
+
+// function customDie(min, max) {
+//     Math.floor(Math.random() * (max - min) + min );
 // }
-// console.log(rollDice());
-// console.log(rollsArray[1]);
