@@ -41,7 +41,7 @@ function findMin(arr) {
 // Array with odds
 
 function oddsArray(num) {
-    let arr = [];
+    let arr = [];img
     for (let index = 1; index <= num; index++) {
         if (index % 2 === 1) {
             arr.push(index);
@@ -245,10 +245,22 @@ function checkValue(value1, value2) {
 }
 
 let gameOne = checkValue(die(6), die(6));
-console.log(gameOne);
-console.log(`Rolls: ${gameOne.rolls}, Min: ${gameOne.min()}, Max: ${gameOne.max()}, Average: ${gameOne.average()}`);
-console.log('Rolls: ' + gameOne.rolls );
+// console.log(gameOne);
+// console.log(`Rolls: ${gameOne.rolls}, Min: ${gameOne.min()}, Max: ${gameOne.max()}, Average: ${gameOne.average()}`);
+// console.log('Rolls: ' + gameOne.rolls );
 
 // function customDie(min, max) {
 //     Math.floor(Math.random() * (max - min) + min );
 // }
+// 
+// fibonacci sequence
+function fib(n) {
+    let arr = [0,1];
+    for (let i = 0; i < (n - 2); i++) {
+        let temp = arr[i + 1];
+        arr.push(arr[i] + temp);
+
+    }
+    return arr;
+}
+console.log(fib(12));
