@@ -245,9 +245,9 @@ function checkValue(value1, value2) {
 }
 
 let gameOne = checkValue(die(6), die(6));
-console.log(gameOne);
-console.log(`Rolls: ${gameOne.rolls}, Min: ${gameOne.min()}, Max: ${gameOne.max()}, Average: ${gameOne.average()}`);
-console.log('Rolls: ' + gameOne.rolls );
+// console.log(gameOne);
+// console.log(`Rolls: ${gameOne.rolls}, Min: ${gameOne.min()}, Max: ${gameOne.max()}, Average: ${gameOne.average()}`);
+// console.log('Rolls: ' + gameOne.rolls );
 
 // function customDie(min, max) {
 //     Math.floor(Math.random() * (max - min) + min );
