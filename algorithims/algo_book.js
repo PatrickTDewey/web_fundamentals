@@ -17,7 +17,7 @@ function printSumTo(num) {
 // console.log(printSumTo(255));
 
 // find and print max
-let arr0 = [1,2,4,3,2];
+let arr0 = [1, 2, 4, 3, 2];
 function findMax(arr) {
     let max = 0;
     for (let index = 0; index < arr.length; index++) {
@@ -28,8 +28,8 @@ function findMax(arr) {
     return max;
 }
 function findMin(arr) {
-    let min = arr[arr.length-1];
-    for (let index = arr.length-1; index > 0; index--) {
+    let min = arr[arr.length - 1];
+    for (let index = arr.length - 1; index > 0; index--) {
         if (arr[index] < min) {
             min = arr[index];
         }
@@ -45,7 +45,7 @@ function oddsArray(num) {
     for (let index = 1; index <= num; index++) {
         if (index % 2 === 1) {
             arr.push(index);
-        }        
+        }
     }
     return arr;
 }
@@ -72,16 +72,16 @@ function maxMinAvg(arr) {
     for (let index = 0; index < arr.length; index++) {
         avg += arr[index];
     }
-    avg = avg/arr.length;
+    avg = avg / arr.length;
     console.log(`Max: ${max}, Min: ${min}, Average: ${avg}`);
 }
 // maxMinAvg(arr1);
 
 // Swap String For Array Negative Values
-function swapNegativeForString(arr){
+function swapNegativeForString(arr) {
     for (let index = 0; index < arr.length; index++) {
         if (arr[index] < 0) {
-            arr[index]='Dojo';
+            arr[index] = 'Dojo';
         }
     }
     return arr;
@@ -90,7 +90,7 @@ function swapNegativeForString(arr){
 
 
 // Print odds 1 - 255
-function printOdds(num){
+function printOdds(num) {
     for (let index = 1; index <= num; index++) {
         if (index % 2 === 1) {
             console.log(index);
@@ -100,11 +100,11 @@ function printOdds(num){
 // printOdds(255);
 
 // iterate array
-function iterateArray(arr){
+function iterateArray(arr) {
     for (let index = 0; index < arr.length; index++) {
         let element = arr[index];
         console.log(element);
-        
+
     }
 }
 // iterateArray(arr0);
@@ -116,15 +116,15 @@ function average(arr) {
         sum += arr[index];
     }
     return sum / length;
-} 
+}
 // console.log(`Average: ${average(arr0)}`);
 
 
 // square the values in an array
-function squareIndex(arr){
+function squareIndex(arr) {
     let squaredArr = [];
     for (let index = 0; index < arr.length; index++) {
-        squaredArr.push(arr[index]*arr[index]);
+        squaredArr.push(arr[index] * arr[index]);
     }
     return squaredArr;
 }
@@ -132,14 +132,14 @@ function squareIndex(arr){
 // console.log(arr1);
 
 // zero out negative numbers
-function negativeIndexZeroed(arr){
+function negativeIndexZeroed(arr) {
     let noNegArr = [];
     for (let index = 0; index < arr.length; index++) {
         if (arr[index] < 0) {
             noNegArr.push(0);
         } else {
             noNegArr.push(arr[index]);
-        }       
+        }
     }
     return noNegArr;
 }
@@ -159,13 +159,13 @@ function shiftArray(array) {
 // Implement ​generateCoinChange(cents)​ that accepts a parameter for the number of cents, and computes how to represent that amount with the smallest number of coins. Console.log the result.
 
 function generateCoinChange(cents) {
-    let quarter = 25, dime = 10, nickel =5, penny = 1, change = cents*100;
+    let quarter = 25, dime = 10, nickel = 5, penny = 1, change = cents * 100;
     let quarterCount = 0, dimeCount = 0, nickelCount = 0, pennyCount = 0;
-    while(change > 0) {
+    while (change > 0) {
         if (change - quarter >= 0) {
-            change -= quarter; 
-            quarterCount++;  
-            console.log(quarter, change);     
+            change -= quarter;
+            quarterCount++;
+            console.log(quarter, change);
         } else if (change - dime >= 0.00) {
             change -= dime;
             dimeCount++;
@@ -199,7 +199,7 @@ function die(max) {
 let stats = {
     'rolls': 1,
     'values': [],
-    'min': function() {
+    'min': function () {
         let min = this.values[0];
         for (let index = 0; index < this.values.length; index++) {
             if (this.values[index] < min) {
@@ -208,7 +208,7 @@ let stats = {
         }
         return min;
     },
-    'max': function() {
+    'max': function () {
         let max = this.values[0];
         for (let index = 0; index < this.values.length; index++) {
             if (this.values[index] > max) {
@@ -217,7 +217,7 @@ let stats = {
         }
         return max;
     },
-    'average': function() {
+    'average': function () {
         let average = 0
         for (let index = 0; index < this.values.length; index++) {
             average += this.values[index][0];
@@ -252,3 +252,80 @@ let gameOne = checkValue(die(6), die(6));
 // function customDie(min, max) {
 //     Math.floor(Math.random() * (max - min) + min );
 // }
+
+var arr2d = [[2, 5, 8],
+[3, 6, 1],
+[5, 7, 7]];
+
+// We can console.log the `8` in this array if we
+// console.log(arr2d[0][2]);
+// console.log();
+function containsValue(arr, value){
+    let bool = false, count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof(arr[i]) == 'object') {
+            for (let index = 0; index < arr[i].length; index++) {
+                console.log(arr[i][index]);
+                if (arr[i][index] == value) {
+                    count++;
+                    bool = true;
+                }
+            
+            }
+        }
+    }
+    // console.log(bool, count);
+}
+// console.log(containsValue(arr2d, 7))
+// the first index `0` will select the `[2, 5, 8]` sub-array
+// the second index `2` will select the `8` out of that sub-array
+function flattenArray(arr){
+    let flattened = []
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof(arr[i]) == 'object') {
+            for (let index = 0; index < arr[i].length; index++) {
+                flattened.push(arr[i][index]);
+            }
+        }
+    }
+    return flattened;
+}
+var result = flattenArray( [ [2, 5, 8], [3, 6, 1], [5, 7, 7] ] );
+// console.log(result);
+
+
+let number = 987;
+function sumToOne(n) {
+    while (n > 9){
+        let sum = 0;
+        while (n > 0) {
+            r = n % 10;
+            n = Math.trunc(n / 10);
+            sum += r;
+        };
+        n = sum;
+    }
+    return n;
+};
+
+function toOneDigit(n){
+    if (n == 0) return 0;
+    return (n % 9 == 0) ? 9 : (n % 9);
+}
+console.log(toOneDigit(987));
+// console.log(321 % 10)
+// console.log(sumToOne(number));
+
+function fibonacciArray(n) {
+    // the [0, 1] are the starting values of the array to calculate the rest from
+    var fibArr = [0, 1];
+    if (n != 2) {
+        for (let index = 0; index < (n - 2); index++) {
+            let temp = fibArr[index + 1];
+            fibArr.push((fibArr[index] + temp));
+        }
+        return fibArr;
+    } else {
+        return 1;
+    }
+}

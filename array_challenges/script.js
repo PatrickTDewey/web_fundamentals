@@ -61,12 +61,17 @@ console.log(result); // we expect back ["e", "d", "c", "b", "a"]
 function fibonacciArray(n) {
     // the [0, 1] are the starting values of the array to calculate the rest from
     var fibArr = [0, 1];
-    for (let index = 0; index < (n - 2); index++) {
-        let temp = fibArr[index + 1];
-        fibArr.push((fibArr[index] + temp));
-        
+    if (n != 2) {
+        for (let index = 0; index < (n - 2); index++) {
+            let temp = fibArr[index + 1];
+            fibArr.push((fibArr[index] + temp));
+            
+        }
+        return fibArr;
+    } else {
+        return 1;
     }
-    return fibArr;
 }
 var result = fibonacciArray(10);
 console.log(result); // we expect back [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
