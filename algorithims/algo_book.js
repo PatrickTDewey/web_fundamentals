@@ -41,7 +41,7 @@ function findMin(arr) {
 // Array with odds
 
 function oddsArray(num) {
-    let arr = [];
+    let arr = [];img
     for (let index = 1; index <= num; index++) {
         if (index % 2 === 1) {
             arr.push(index);
@@ -252,6 +252,7 @@ let gameOne = checkValue(die(6), die(6));
 // function customDie(min, max) {
 //     Math.floor(Math.random() * (max - min) + min );
 // }
+<<<<<<< HEAD
 
 var arr2d = [[2, 5, 8],
 [3, 6, 1],
@@ -329,3 +330,17 @@ function fibonacciArray(n) {
         return 1;
     }
 }
+=======
+// 
+// fibonacci sequence
+function fib(n) {
+    let arr = [0,1];
+    for (let i = 0; i < (n - 2); i++) {
+        let temp = arr[i + 1];
+        arr.push(arr[i] + temp);
+
+    }
+    return arr;
+}
+console.log(fib(12));
+>>>>>>> 168a3893ca3fbf1deba10f12286069f646fc8833
