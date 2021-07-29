@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Taco Truck</title>
+</head>
+<body>
+    <header class="taco-header">
+        <h1 class="header-h1">Taco Truck: The Best Asada Anywhere.</h1>
+    </header>
+    <main class="taco-meat">
+            <select name="meat" id="meat" class="taco-select">
+                <option value="asada">Asada</option>
+                <option value="pollo">Pollo</option>
+                <option value="pastor">Pastor</option>
+            </select>
+            <select name="cheese" id="cheese" class="taco-select">
+                <option value="queso">Queso</option>
+                <option value="4 cheese blend">Four cheese blend</option>
+                <option value="wiz">Cheese-Wiz</option>
+                <option value="none">None</option>
+            </select>
+            <button class="order-button">Order</button>
+        <div class="selected-options">
+            <h2 class="selected-header">You Selected:</h2>
+            <h3>Meat:</h3>
+            <h3 id="meat-header"></h3>
+            <h3>Cheese:</h3>
+            <h3 id="cheese-header"></h3>
+        </div>
+    </main>
+</body>
+</html>
