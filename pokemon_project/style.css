@@ -75,9 +75,9 @@ html {
     'input input button'
     ;
     align-items: center;
-    justify-items: center;
 }
 .add-more h3 {
+    text-align: center;
     grid-area: header;
 }
 .add-more input {
