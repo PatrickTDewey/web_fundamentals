@@ -312,7 +312,7 @@ function toOneDigit(n){
     if (n == 0) return 0;
     return (n % 9 == 0) ? 9 : (n % 9);
 }
-console.log(toOneDigit(987));
+// console.log(toOneDigit(987));
 // console.log(321 % 10)
 // console.log(sumToOne(number));
 
@@ -329,3 +329,63 @@ function fibonacciArray(n) {
         return 1;
     }
 }
+
+// Last digit A to the B
+
+// function modulo(a, b) {
+
+//     // inititialize result 
+//     let mod = 0;
+
+//     //calculating mod of b with a to make
+//     for (let i = 0; i < b.length; i++) {
+//         console.log(b[i]);
+//         mod = (mod * 10 + b[i] - '0' % a);
+//         console.log(mod);
+//         // console.log(a);
+//     }
+//     return mod
+// }
+// // modulo('2', '120');
+// console.log('3' - 0);
+// console.log(2**2);
+// console.log(1258**4227);
+// console.log('123' % 10);
+let numA = 3;
+let numB = 4;
+function divisibleByFour(b) {
+    let tothepower = 0;
+    if (b % 4 == 0) {
+        tothepower = 4;
+    } else {
+        tothepower = b % 4;
+    }
+    return tothepower;
+}
+
+function lastDigitAtoTheB(a, b) {
+    let finalDigit = 0;
+    let lastDigitA = a % 10;
+    let exponent = divisibleByFour(b);
+    finalDigit = ((lastDigitA**exponent) % 10);
+    return finalDigit;
+}
+// console.log(lastDigitAtoTheB(12, 6));
+
+/*********************** 
+
+raditional clocks are increasingly uncommon, but most can still read rotating hands of hours, minutes, 
+and seconds.  
+ 
+Create function ​clockHandAngles(seconds)​ that, given the number of seconds since 12:00:00, will 
+print the angles (in degrees) of the hour, minute and second hands. As a quick review, there are 360 
+degrees in a full arc rotation. Treat “straight-up” 12:00:00 as 0 degrees for all hands.
+ * ****************/
+function clockHandAngles(seconds) {
+    let degreeSeconds = 0, degreeMinutes = 0, degreeHours = 0;
+    degreeSeconds += Math.trunc((6 * (seconds % 60)))
+    degreeMinutes += Math.trunc((0.1 * (seconds % 3600)))
+    degreeHours += Math.trunc(0.008333333 * (seconds % 43200))
+    console.log(`Second Hand Degree: ${degreeSeconds}\nMinute Hand Degree: ${degreeMinutes}\nHour Hand Degree: ${degreeHours}`);
+}
+clockHandAngles(4513);
