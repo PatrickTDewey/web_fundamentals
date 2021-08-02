@@ -41,7 +41,7 @@ function findMin(arr) {
 // Array with odds
 
 function oddsArray(num) {
-    let arr = [];img
+    let arr = []; img
     for (let index = 1; index <= num; index++) {
         if (index % 2 === 1) {
             arr.push(index);
@@ -260,17 +260,17 @@ var arr2d = [[2, 5, 8],
 // We can console.log the `8` in this array if we
 // console.log(arr2d[0][2]);
 // console.log();
-function containsValue(arr, value){
+function containsValue(arr, value) {
     let bool = false, count = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (typeof(arr[i]) == 'object') {
+        if (typeof (arr[i]) == 'object') {
             for (let index = 0; index < arr[i].length; index++) {
                 console.log(arr[i][index]);
                 if (arr[i][index] == value) {
                     count++;
                     bool = true;
                 }
-            
+
             }
         }
     }
@@ -279,10 +279,10 @@ function containsValue(arr, value){
 // console.log(containsValue(arr2d, 7))
 // the first index `0` will select the `[2, 5, 8]` sub-array
 // the second index `2` will select the `8` out of that sub-array
-function flattenArray(arr){
+function flattenArray(arr) {
     let flattened = []
     for (let i = 0; i < arr.length; i++) {
-        if (typeof(arr[i]) == 'object') {
+        if (typeof (arr[i]) == 'object') {
             for (let index = 0; index < arr[i].length; index++) {
                 flattened.push(arr[i][index]);
             }
@@ -290,13 +290,13 @@ function flattenArray(arr){
     }
     return flattened;
 }
-var result = flattenArray( [ [2, 5, 8], [3, 6, 1], [5, 7, 7] ] );
+var result = flattenArray([[2, 5, 8], [3, 6, 1], [5, 7, 7]]);
 // console.log(result);
 
 
 let number = 987;
 function sumToOne(n) {
-    while (n > 9){
+    while (n > 9) {
         let sum = 0;
         while (n > 0) {
             r = n % 10;
@@ -308,7 +308,7 @@ function sumToOne(n) {
     return n;
 };
 
-function toOneDigit(n){
+function toOneDigit(n) {
     if (n == 0) return 0;
     return (n % 9 == 0) ? 9 : (n % 9);
 }
@@ -367,7 +367,7 @@ function lastDigitAtoTheB(a, b) {
     let finalDigit = 0;
     let lastDigitA = a % 10;
     let exponent = divisibleByFour(b);
-    finalDigit = ((lastDigitA**exponent) % 10);
+    finalDigit = ((lastDigitA ** exponent) % 10);
     return finalDigit;
 }
 // console.log(lastDigitAtoTheB(12, 6));
@@ -386,6 +386,61 @@ function clockHandAngles(seconds) {
     degreeSeconds += Math.trunc((6 * (seconds % 60)))
     degreeMinutes += Math.trunc((0.1 * (seconds % 3600)))
     degreeHours += Math.trunc(0.008333333 * (seconds % 43200))
-    console.log(`Second Hand Degree: ${degreeSeconds}\nMinute Hand Degree: ${degreeMinutes}\nHour Hand Degree: ${degreeHours}`);
+    // console.log(`Second Hand Degree: ${degreeSeconds}\nMinute Hand Degree: ${degreeMinutes}\nHour Hand Degree: ${degreeHours}`);
 }
 clockHandAngles(4513);
+
+// make acronym out of string
+let my_string = 'a random string about strings';
+let dash = "There's no free lunch - Gotta pay your way.";
+let new_york = 'Live from New York,     It\'s Saturday Night Live!';
+
+function acronym(string) {
+    let acroString = '';
+    if (string[0] != ' ') {
+        acroString += string[0];
+    }
+    for (let i = 0; i < string.length; i++) {
+        if (string[i - 1] == ' ' && string[i] != ' ') {
+            // do something
+            acroString += string[i];
+        }
+    }
+    return acroString.toUpperCase();
+}
+// console.log(acronym(my_string));
+// console.log(acronym(new_york));
+// console.log(acronym(dash));
+
+// given string return reverse of string
+
+let creature = 'creature';
+let dog = 'dog';
+
+function reverseString(string) {
+    let reversed = '';
+    for (let i = string.length - 1; i >= 0; i--) {
+        reversed += string[i];
+
+    }
+    return reversed;
+}
+
+console.log(reverseString(dog));
+console.log(reverseString(creature));
+
+// Brian G, Nick F, Shane S, Hunjin Ryan P, Patrick D
+
+// string characters are immutable the following function will not work the way intended
+
+// function reverse_string(string){
+//     for (let i = 0; i < string.length / 2; i++) {
+//         let temp = string[i];
+//         console.log(temp); 
+//         string[i] = string[string.length-1];
+//         console.log(string[i]);
+//         string[string.length-1] = temp;
+//     }
+//     return string;
+// }
+// console.log(reverse_string(dog));
