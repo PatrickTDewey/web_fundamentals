@@ -426,8 +426,8 @@ function reverseString(string) {
     return reversed;
 }
 
-console.log(reverseString(dog));
-console.log(reverseString(creature));
+// console.log(reverseString(dog));
+// console.log(reverseString(creature));
 
 // Brian G, Nick F, Shane S, Hunjin Ryan P, Patrick D
 
@@ -444,3 +444,170 @@ console.log(reverseString(creature));
 //     return string;
 // }
 // console.log(reverse_string(dog));
+
+
+// PushFront given an arr and value push the value to the beginning of arr without using built-in method
+let myArr0 = [1,2,3,4,5,6,7]
+function pushFront(arr, value){
+    let newArr = [];
+    newArr[0] = value;
+    for (let i = 0; i < arr.length; i++) {
+        newArr[i + 1] = arr[i];
+    }
+    return newArr;
+}
+// console.log(pushFront(myArr0 , 3))
+
+// dont do what the proceeding function does, ever
+function pushFront1(arr, value){
+    for (let i = 0; i < arr.length; i++) {
+        let temp = arr[i];
+        console.log(temp);
+        if (i == 0) {
+            arr[0] = value;
+            console.log(arr[0], "I'm stuck");
+        } else {
+            
+            arr[i] = arr[i + 1];
+            console.log(arr[i], "I'm stuck");
+        }
+        // arr[i + 1] = temp; this will return 1 and reassign 1 to the top forever increasing your index with 1's
+        console.log(arr[i+1]);
+    } 
+    return arr;
+}
+
+// do this instead
+function pushFront2(arr, value) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        console.log(arr[i]);
+        arr[i+1] = arr[i];
+    }
+    arr[0] = value;
+    return arr;
+}   
+// console.log(pushFront2(myArr0, 3))
+
+
+// encode
+
+let stringOne = 'aaaabbcddd';
+let emptyString = '';
+let stringTwo = 'a';
+function shortenString(string){
+    let returnedString = '';
+    let count = 1;
+    for (let i = 0; i < string.length; i++) {
+        console.log(string.charAt(i));
+        while(string.charAt(i) == string.charAt(i + 1)){
+            count++;
+            i++;
+        }
+        returnedString += string.charAt(i);
+        if (count > 1) {
+            returnedString += count;
+        }
+        count = 1
+    }
+    return returnedString
+}
+// console.log(shortenString(stringOne));
+
+// decode
+// isNaN()
+let encoded = shortenString(stringOne);
+function decodeFunc(string){
+    let emptyStr = '';
+    for (let i = 0; i < string.length; i++) {
+        if (isNaN(string[i]) == true) {
+            let number = string[i+1];
+            console.log(number);
+        }
+    }
+    return emptyStr;
+}
+console.log(decodeFunc(encoded));
+
+// popFront function
+// let my_popped = [1,2,3,4,5,6]
+// function popFront(arr) {
+//     for (let i = 0; i < (arr.length / 2); i++) {
+//         let temp = arr[i];
+//         console.log('Temp:' + temp);
+//         arr[i] = arr[arr.length - 1];
+//         console.log('index of ' + arr[i]);
+//         arr[arr.length - 1] = temp;
+//         console.log('arr[arr.length - 1] ' + arr[arr.length -1]);
+//     }
+//     return arr;
+// }
+// console.log(popFront(my_popped))
+let my_string_0 = "aabbaa";
+let my_string_1 = "abneafk"
+function isPalendrome(string){
+    let reversed = '';
+    for (let i = string.length - 1; i >=0 ; i--) {
+        reversed += string[i];
+    }
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] != reversed[i]) {
+            return false
+        }
+        
+    }
+    return true;
+}
+
+// console.log(isPalendrome(my_string_0));
+// console.log(isPalendrome(my_string_1));
+
+function isPalendrome1(string){
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] != string[string.length -i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// console.log(isPalendrome1(my_string_1));
+
+// function longestSubstring(string){
+//     // if (isPalendrome1(string) == true) {}
+//         let split_arr = string.split(" ");
+//         let longest = '';
+//         for (let i = 0; i < split_arr.length; i++) {
+//             console.log(split_arr[i]);
+//             for (let j = 0; j < split_arr[i].length; j++) {
+//                 let x = 0
+//                 console.log(split_arr[i][j]);
+//                 if (split_arr[i][x] == split[i][j]) {
+                    
+//                 }
+//             }
+            
+//         }
+    
+// }
+// longestSubstring(racecar);
+let daddy = "Waddup daddy-o"
+let racecar = "Yikes! My favorite racecar erupted"
+let bab = "babab"
+let cbbd = "cbbd"
+function countSubstring(string){
+    for (let i = 0; i < string.length; i++) {
+        let left = string[i]
+        let right = string[string.length - i - 1]
+        
+        // console.log(left, right);
+
+    }
+}
+// countSubstring(racecar)
+
+function generateCoinChangeObject(cents){
+    let quarter = 25, dime = 10, nickel = 5, penny = 0;
+    console.log(cents % quarter);
+}
+
+// generateCoinChange(173)
