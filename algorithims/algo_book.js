@@ -17,7 +17,7 @@ function printSumTo(num) {
 // console.log(printSumTo(255));
 
 // find and print max
-let arr0 = [1,2,4,3,2];
+let arr0 = [1, 2, 4, 3, 2];
 function findMax(arr) {
     let max = 0;
     for (let index = 0; index < arr.length; index++) {
@@ -28,8 +28,8 @@ function findMax(arr) {
     return max;
 }
 function findMin(arr) {
-    let min = arr[arr.length-1];
-    for (let index = arr.length-1; index > 0; index--) {
+    let min = arr[arr.length - 1];
+    for (let index = arr.length - 1; index > 0; index--) {
         if (arr[index] < min) {
             min = arr[index];
         }
@@ -41,11 +41,11 @@ function findMin(arr) {
 // Array with odds
 
 function oddsArray(num) {
-    let arr = [];
+    let arr = []; img
     for (let index = 1; index <= num; index++) {
         if (index % 2 === 1) {
             arr.push(index);
-        }        
+        }
     }
     return arr;
 }
@@ -72,16 +72,16 @@ function maxMinAvg(arr) {
     for (let index = 0; index < arr.length; index++) {
         avg += arr[index];
     }
-    avg = avg/arr.length;
+    avg = avg / arr.length;
     console.log(`Max: ${max}, Min: ${min}, Average: ${avg}`);
 }
 // maxMinAvg(arr1);
 
 // Swap String For Array Negative Values
-function swapNegativeForString(arr){
+function swapNegativeForString(arr) {
     for (let index = 0; index < arr.length; index++) {
         if (arr[index] < 0) {
-            arr[index]='Dojo';
+            arr[index] = 'Dojo';
         }
     }
     return arr;
@@ -90,7 +90,7 @@ function swapNegativeForString(arr){
 
 
 // Print odds 1 - 255
-function printOdds(num){
+function printOdds(num) {
     for (let index = 1; index <= num; index++) {
         if (index % 2 === 1) {
             console.log(index);
@@ -100,11 +100,11 @@ function printOdds(num){
 // printOdds(255);
 
 // iterate array
-function iterateArray(arr){
+function iterateArray(arr) {
     for (let index = 0; index < arr.length; index++) {
         let element = arr[index];
         console.log(element);
-        
+
     }
 }
 // iterateArray(arr0);
@@ -116,15 +116,15 @@ function average(arr) {
         sum += arr[index];
     }
     return sum / length;
-} 
+}
 // console.log(`Average: ${average(arr0)}`);
 
 
 // square the values in an array
-function squareIndex(arr){
+function squareIndex(arr) {
     let squaredArr = [];
     for (let index = 0; index < arr.length; index++) {
-        squaredArr.push(arr[index]*arr[index]);
+        squaredArr.push(arr[index] * arr[index]);
     }
     return squaredArr;
 }
@@ -132,14 +132,14 @@ function squareIndex(arr){
 // console.log(arr1);
 
 // zero out negative numbers
-function negativeIndexZeroed(arr){
+function negativeIndexZeroed(arr) {
     let noNegArr = [];
     for (let index = 0; index < arr.length; index++) {
         if (arr[index] < 0) {
             noNegArr.push(0);
         } else {
             noNegArr.push(arr[index]);
-        }       
+        }
     }
     return noNegArr;
 }
@@ -159,13 +159,13 @@ function shiftArray(array) {
 // Implement ​generateCoinChange(cents)​ that accepts a parameter for the number of cents, and computes how to represent that amount with the smallest number of coins. Console.log the result.
 
 function generateCoinChange(cents) {
-    let quarter = 25, dime = 10, nickel =5, penny = 1, change = cents*100;
+    let quarter = 25, dime = 10, nickel = 5, penny = 1, change = cents * 100;
     let quarterCount = 0, dimeCount = 0, nickelCount = 0, pennyCount = 0;
-    while(change > 0) {
+    while (change > 0) {
         if (change - quarter >= 0) {
-            change -= quarter; 
-            quarterCount++;  
-            console.log(quarter, change);     
+            change -= quarter;
+            quarterCount++;
+            console.log(quarter, change);
         } else if (change - dime >= 0.00) {
             change -= dime;
             dimeCount++;
@@ -199,7 +199,7 @@ function die(max) {
 let stats = {
     'rolls': 1,
     'values': [],
-    'min': function() {
+    'min': function () {
         let min = this.values[0];
         for (let index = 0; index < this.values.length; index++) {
             if (this.values[index] < min) {
@@ -208,7 +208,7 @@ let stats = {
         }
         return min;
     },
-    'max': function() {
+    'max': function () {
         let max = this.values[0];
         for (let index = 0; index < this.values.length; index++) {
             if (this.values[index] > max) {
@@ -217,7 +217,7 @@ let stats = {
         }
         return max;
     },
-    'average': function() {
+    'average': function () {
         let average = 0
         for (let index = 0; index < this.values.length; index++) {
             average += this.values[index][0];
@@ -245,10 +245,369 @@ function checkValue(value1, value2) {
 }
 
 let gameOne = checkValue(die(6), die(6));
-console.log(gameOne);
-console.log(`Rolls: ${gameOne.rolls}, Min: ${gameOne.min()}, Max: ${gameOne.max()}, Average: ${gameOne.average()}`);
-console.log('Rolls: ' + gameOne.rolls );
+// console.log(gameOne);
+// console.log(`Rolls: ${gameOne.rolls}, Min: ${gameOne.min()}, Max: ${gameOne.max()}, Average: ${gameOne.average()}`);
+// console.log('Rolls: ' + gameOne.rolls );
 
 // function customDie(min, max) {
 //     Math.floor(Math.random() * (max - min) + min );
 // }
+
+var arr2d = [[2, 5, 8],
+[3, 6, 1],
+[5, 7, 7]];
+
+// We can console.log the `8` in this array if we
+// console.log(arr2d[0][2]);
+// console.log();
+function containsValue(arr, value) {
+    let bool = false, count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof (arr[i]) == 'object') {
+            for (let index = 0; index < arr[i].length; index++) {
+                console.log(arr[i][index]);
+                if (arr[i][index] == value) {
+                    count++;
+                    bool = true;
+                }
+
+            }
+        }
+    }
+    // console.log(bool, count);
+}
+// console.log(containsValue(arr2d, 7))
+// the first index `0` will select the `[2, 5, 8]` sub-array
+// the second index `2` will select the `8` out of that sub-array
+function flattenArray(arr) {
+    let flattened = []
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof (arr[i]) == 'object') {
+            for (let index = 0; index < arr[i].length; index++) {
+                flattened.push(arr[i][index]);
+            }
+        }
+    }
+    return flattened;
+}
+var result = flattenArray([[2, 5, 8], [3, 6, 1], [5, 7, 7]]);
+// console.log(result);
+
+
+let number = 987;
+function sumToOne(n) {
+    while (n > 9) {
+        let sum = 0;
+        while (n > 0) {
+            r = n % 10;
+            n = Math.trunc(n / 10);
+            sum += r;
+        };
+        n = sum;
+    }
+    return n;
+};
+
+function toOneDigit(n) {
+    if (n == 0) return 0;
+    return (n % 9 == 0) ? 9 : (n % 9);
+}
+// console.log(toOneDigit(987));
+// console.log(321 % 10)
+// console.log(sumToOne(number));
+
+function fibonacciArray(n) {
+    // the [0, 1] are the starting values of the array to calculate the rest from
+    var fibArr = [0, 1];
+    if (n != 2) {
+        for (let index = 0; index < (n - 2); index++) {
+            let temp = fibArr[index + 1];
+            fibArr.push((fibArr[index] + temp));
+        }
+        return fibArr;
+    } else {
+        return 1;
+    }
+}
+
+// Last digit A to the B
+
+// function modulo(a, b) {
+
+//     // inititialize result 
+//     let mod = 0;
+
+//     //calculating mod of b with a to make
+//     for (let i = 0; i < b.length; i++) {
+//         console.log(b[i]);
+//         mod = (mod * 10 + b[i] - '0' % a);
+//         console.log(mod);
+//         // console.log(a);
+//     }
+//     return mod
+// }
+// // modulo('2', '120');
+// console.log('3' - 0);
+// console.log(2**2);
+// console.log(1258**4227);
+// console.log('123' % 10);
+let numA = 3;
+let numB = 4;
+function divisibleByFour(b) {
+    let tothepower = 0;
+    if (b % 4 == 0) {
+        tothepower = 4;
+    } else {
+        tothepower = b % 4;
+    }
+    return tothepower;
+}
+
+function lastDigitAtoTheB(a, b) {
+    let finalDigit = 0;
+    let lastDigitA = a % 10;
+    let exponent = divisibleByFour(b);
+    finalDigit = ((lastDigitA ** exponent) % 10);
+    return finalDigit;
+}
+// console.log(lastDigitAtoTheB(12, 6));
+
+/*********************** 
+
+raditional clocks are increasingly uncommon, but most can still read rotating hands of hours, minutes, 
+and seconds.  
+ 
+Create function ​clockHandAngles(seconds)​ that, given the number of seconds since 12:00:00, will 
+print the angles (in degrees) of the hour, minute and second hands. As a quick review, there are 360 
+degrees in a full arc rotation. Treat “straight-up” 12:00:00 as 0 degrees for all hands.
+ * ****************/
+function clockHandAngles(seconds) {
+    let degreeSeconds = 0, degreeMinutes = 0, degreeHours = 0;
+    degreeSeconds += Math.trunc((6 * (seconds % 60)))
+    degreeMinutes += Math.trunc((0.1 * (seconds % 3600)))
+    degreeHours += Math.trunc(0.008333333 * (seconds % 43200))
+    // console.log(`Second Hand Degree: ${degreeSeconds}\nMinute Hand Degree: ${degreeMinutes}\nHour Hand Degree: ${degreeHours}`);
+}
+clockHandAngles(4513);
+
+// make acronym out of string
+let my_string = 'a random string about strings';
+let dash = "There's no free lunch - Gotta pay your way.";
+let new_york = 'Live from New York,     It\'s Saturday Night Live!';
+
+function acronym(string) {
+    let acroString = '';
+    if (string[0] != ' ') {
+        acroString += string[0];
+    }
+    for (let i = 0; i < string.length; i++) {
+        if (string[i - 1] == ' ' && string[i] != ' ') {
+            // do something
+            acroString += string[i];
+        }
+    }
+    return acroString.toUpperCase();
+}
+// console.log(acronym(my_string));
+// console.log(acronym(new_york));
+// console.log(acronym(dash));
+
+// given string return reverse of string
+
+let creature = 'creature';
+let dog = 'dog';
+
+function reverseString(string) {
+    let reversed = '';
+    for (let i = string.length - 1; i >= 0; i--) {
+        reversed += string[i];
+
+    }
+    return reversed;
+}
+
+// console.log(reverseString(dog));
+// console.log(reverseString(creature));
+
+// Brian G, Nick F, Shane S, Hunjin Ryan P, Patrick D
+
+// string characters are immutable the following function will not work the way intended
+
+// function reverse_string(string){
+//     for (let i = 0; i < string.length / 2; i++) {
+//         let temp = string[i];
+//         console.log(temp); 
+//         string[i] = string[string.length-1];
+//         console.log(string[i]);
+//         string[string.length-1] = temp;
+//     }
+//     return string;
+// }
+// console.log(reverse_string(dog));
+
+
+// PushFront given an arr and value push the value to the beginning of arr without using built-in method
+let myArr0 = [1,2,3,4,5,6,7]
+function pushFront(arr, value){
+    let newArr = [];
+    newArr[0] = value;
+    for (let i = 0; i < arr.length; i++) {
+        newArr[i + 1] = arr[i];
+    }
+    return newArr;
+}
+// console.log(pushFront(myArr0 , 3))
+
+// dont do what the proceeding function does, ever
+function pushFront1(arr, value){
+    for (let i = 0; i < arr.length; i++) {
+        let temp = arr[i];
+        console.log(temp);
+        if (i == 0) {
+            arr[0] = value;
+            console.log(arr[0], "I'm stuck");
+        } else {
+            
+            arr[i] = arr[i + 1];
+            console.log(arr[i], "I'm stuck");
+        }
+        // arr[i + 1] = temp; this will return 1 and reassign 1 to the top forever increasing your index with 1's
+        console.log(arr[i+1]);
+    } 
+    return arr;
+}
+
+// do this instead
+function pushFront2(arr, value) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        console.log(arr[i]);
+        arr[i+1] = arr[i];
+    }
+    arr[0] = value;
+    return arr;
+}   
+// console.log(pushFront2(myArr0, 3))
+
+
+// encode
+
+let stringOne = 'aaaabbcddd';
+let emptyString = '';
+let stringTwo = 'a';
+function shortenString(string){
+    let returnedString = '';
+    let count = 1;
+    for (let i = 0; i < string.length; i++) {
+        console.log(string.charAt(i));
+        while(string.charAt(i) == string.charAt(i + 1)){
+            count++;
+            i++;
+        }
+        returnedString += string.charAt(i);
+        if (count > 1) {
+            returnedString += count;
+        }
+        count = 1
+    }
+    return returnedString
+}
+// console.log(shortenString(stringOne));
+
+// decode
+// isNaN()
+let encoded = shortenString(stringOne);
+function decodeFunc(string){
+    let emptyStr = '';
+    for (let i = 0; i < string.length; i++) {
+        if (isNaN(string[i]) == true) {
+            let number = string[i+1];
+            console.log(number);
+        }
+    }
+    return emptyStr;
+}
+console.log(decodeFunc(encoded));
+
+// popFront function
+// let my_popped = [1,2,3,4,5,6]
+// function popFront(arr) {
+//     for (let i = 0; i < (arr.length / 2); i++) {
+//         let temp = arr[i];
+//         console.log('Temp:' + temp);
+//         arr[i] = arr[arr.length - 1];
+//         console.log('index of ' + arr[i]);
+//         arr[arr.length - 1] = temp;
+//         console.log('arr[arr.length - 1] ' + arr[arr.length -1]);
+//     }
+//     return arr;
+// }
+// console.log(popFront(my_popped))
+let my_string_0 = "aabbaa";
+let my_string_1 = "abneafk"
+function isPalendrome(string){
+    let reversed = '';
+    for (let i = string.length - 1; i >=0 ; i--) {
+        reversed += string[i];
+    }
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] != reversed[i]) {
+            return false
+        }
+        
+    }
+    return true;
+}
+
+// console.log(isPalendrome(my_string_0));
+// console.log(isPalendrome(my_string_1));
+
+function isPalendrome1(string){
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] != string[string.length -i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// console.log(isPalendrome1(my_string_1));
+
+// function longestSubstring(string){
+//     // if (isPalendrome1(string) == true) {}
+//         let split_arr = string.split(" ");
+//         let longest = '';
+//         for (let i = 0; i < split_arr.length; i++) {
+//             console.log(split_arr[i]);
+//             for (let j = 0; j < split_arr[i].length; j++) {
+//                 let x = 0
+//                 console.log(split_arr[i][j]);
+//                 if (split_arr[i][x] == split[i][j]) {
+                    
+//                 }
+//             }
+            
+//         }
+    
+// }
+// longestSubstring(racecar);
+let daddy = "Waddup daddy-o"
+let racecar = "Yikes! My favorite racecar erupted"
+let bab = "babab"
+let cbbd = "cbbd"
+function countSubstring(string){
+    for (let i = 0; i < string.length; i++) {
+        let left = string[i]
+        let right = string[string.length - i - 1]
+        
+        // console.log(left, right);
+
+    }
+}
+// countSubstring(racecar)
+
+function generateCoinChangeObject(cents){
+    let quarter = 25, dime = 10, nickel = 5, penny = 0;
+    console.log(cents % quarter);
+}
+
+// generateCoinChange(173)
