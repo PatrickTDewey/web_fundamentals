@@ -13,13 +13,9 @@ mobileMenu.addEventListener('click', function(event){
 });
 
 // Typewriting function
-let text = "No manual entry for Patrick"
-let typed = document.querySelector('.typewriter');
-typed.addEventListener('o')
-function typeWriter() {
-    for (let index = 0; index < text.length; index++) {
-        
-        setTimeout(typeWriter, 50)
-        
-    }
-}
+
+
+document.body.addEventListener('load', function(event) {
+    console.log('Page Loaded');
+    console.log(event);
+})
