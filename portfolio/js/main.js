@@ -13,22 +13,9 @@ mobileMenu.addEventListener('click', function(event){
 });
 
 // Typewriting function
-let text = "No manual entry for Patrick"
-let i = 0;
-// typed.addEventListener('o')
-// function typeWriter() {
-//     for (let index = 0; index < text.length; index++) {
-        
-//         setTimeout(typeWriter, 50)
-        
-//     }
-// }
-window.addEventListener('DOMContentLoaded', function typeWriter(){
-    console.log('DOM fully loaded and parsed');
-    if (i < text.length) {
-        console.log(text[i]);
-        document.querySelector('.typewriter').innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 60);
-    }
-});
+
+
+document.body.addEventListener('load', function(event) {
+    console.log('Page Loaded');
+    console.log(event);
+})
