@@ -3,7 +3,9 @@
  * @return {number}
  */
 const removeDuplicates = (nums) => {
+    
     // set k constant to start at 0
+    debugger;
     let k = 0;
 
     for (let i = 0; i < nums.length; i++) {
@@ -18,7 +20,7 @@ const removeDuplicates = (nums) => {
             k++;
         }
     }
-    
+
     return k;
 }
 let nums = [1, 1, 2];
