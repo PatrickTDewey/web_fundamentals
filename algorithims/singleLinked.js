@@ -20,6 +20,10 @@ class SLList {
 
     addNodeToBack(value){
         var runner = this.head;
+        if (runner === null) {
+            this.head = value;
+            return this
+        }
         while (runner.next != null) {
             runner = runner.next;
         }
@@ -42,7 +46,7 @@ class SLList {
 
 const myList = new SLList();
 console.log(myList);
-myList.addNodeToFront(3);
+// myList.addNodeToFront(3);
 console.log(myList);
 myList.addNodeToBack(8);
 console.log(myList);
