@@ -18,6 +18,7 @@ function ListNode(val, next) {
  */
 
 var mergeTwoLists = function (l1, l2) {
+    debugger
     let array = [];
     let sortedList = []
     while (l1.next != null) {
@@ -30,6 +31,8 @@ var mergeTwoLists = function (l1, l2) {
         l2 = l2.next;
     }
     array.push(l2.val);
+
+
     while (array.length > 0) {
         let min = array[0];
         for (let index = 0; index < array.length; index++) {
@@ -37,9 +40,12 @@ var mergeTwoLists = function (l1, l2) {
                 min = array[index];
             }
         }
+        // new array spliced of 1 min value
         let spliced = array.splice(array.indexOf(min), 1);
+        // push the one min to sortedList
         sortedList.push(spliced.pop());
     }
+    
     return sortedList;
 
 };
@@ -73,5 +79,5 @@ let l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
     // }
     // return sortedList;
 
-};
-mergeTwoLists(l1,l2)
+// };
+console.log(mergeTwoLists(l1,l2))
