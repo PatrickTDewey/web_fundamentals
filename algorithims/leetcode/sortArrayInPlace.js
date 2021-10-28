@@ -6,16 +6,16 @@
     let count = 0;
     for (let i = 0; i < nums.length - count; i++) {
         if (nums[i] === 1 ) {
-            let temp = nums.splice(i, 1)
-            nums.push(temp[0]);
+            nums.splice(i, 1)
+            nums.push(1);
             count++;
             i--;
         }
     }
     for (let j = 0; j < nums.length - count; j++) {
         if (nums[j] === 2 ) {
-            let temp = nums.splice(j, 1)
-            nums.push(temp[0]);
+            nums.splice(j, 1)
+            nums.push(2);
             count++;
             j--;
 
@@ -24,5 +24,5 @@
     return nums;
 };
 
-let nums = [2,0,2,1,1,0]
+let nums = [2,0,2,1,0,1]
 console.log(sortColors(nums));
