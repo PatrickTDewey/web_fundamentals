@@ -6,7 +6,7 @@
     let maxLength = 0;
     
     let count = 0;
-
+    debugger;
     while(count < s.length){
         
         let string = '';
