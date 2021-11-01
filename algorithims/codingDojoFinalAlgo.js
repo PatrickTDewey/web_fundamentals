@@ -1,5 +1,5 @@
 class TrieNode {
-  constructor(char = "") {
+  constructor(char = '') {
     // each node stores its own character value
     this.character = char;
 

@@ -58,13 +58,13 @@
 // }
 
 
-function add(x, y){
+// function add(x, y){
 
-    if (typeof x != 'numer' || typeof y) {
-        return 'Please enter a number for both x and y parameters';
-    }
-    return x + y;
-}
+//     if (typeof x != 'numer' || typeof y) {
+//         return 'Please enter a number for both x and y parameters';
+//     }
+//     return x + y;
+// }
 
 // console.log(add(2,3))
 
