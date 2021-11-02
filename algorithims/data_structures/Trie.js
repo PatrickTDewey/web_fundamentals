@@ -73,7 +73,6 @@ class Trie {
 }
 
 let trie = new Trie();
-// console.log(trie);
+console.log(trie);
 console.log(trie.insert('hey'))
-console.log(trie.root.getWord());
-console.log(trie.root.children['h'].children['e'].children['y']);
+console.log(trie.root.children['h'].children['e'].children['y'].getWord());
