@@ -70,4 +70,20 @@
 
 // console.log(add(3, 3))
 
-console.log(add('cheese', 3))
+const joinArrayOfArrays = (array) => {
+    let flatArray = []
+
+    for (let i = 0; i < array.length; i++) {
+        let count = 0;
+        // while(count < array[i].length){
+        //     flatArray.push(array[i][count])
+        //     count++
+        // }
+        flatArray = flatArray.concat(array[i])
+        
+    }
+    return flatArray;
+}
+
+let twoDimensionalArray = [[1,3], ['true', 'false'], [5,6,7]]
+console.log(joinArrayOfArrays(twoDimensionalArray))

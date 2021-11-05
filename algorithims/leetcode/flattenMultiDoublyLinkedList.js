@@ -28,20 +28,3 @@
     }
     return head;
 }
-
-
-let string = '';
-console.log(string.length)
-
-let stringOne = "dskfjhueiaksko"
-const countVowels = (s) => {
-    let vowels ='aeiou'
-    let count = 0
-    s.split('').forEach(char => {
-        vowels.indexOf(char) != -1 ? count ++ : count;
-        
-    })
-
-    return count;
-}
-console.log(countVowels(stringOne))
