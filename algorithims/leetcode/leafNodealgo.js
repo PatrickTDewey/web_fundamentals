@@ -29,4 +29,5 @@ var checkNodes = function(root, num, sum){
     }
     checkNodes(node.right, currentNumber, sum)
     checkNodes(node.left, currentNumber, sum)
+
 }
