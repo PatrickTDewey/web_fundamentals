@@ -9,7 +9,7 @@ const removeDuplicates = (nums) => {
     let k = 0;
 
     for (let i = 0; i < nums.length; i++) {
-        // if the index of the first unique number is equal to the next number in the list, remove the next number, and add char to the back
+        // if the first unique number is equal to the next number in the list, remove the next number, and add char to the back
         if (nums[k] == nums[k+1]) {
             nums.splice(k+1, 1);
             nums.push("_");

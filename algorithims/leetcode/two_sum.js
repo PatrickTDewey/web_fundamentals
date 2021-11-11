@@ -3,7 +3,7 @@
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 // You can return the answer in any order.
-let nums = [2,7,11,15], target = 9;
+let nums = [2,4,11,15, 7], target = 9;
 // nums = [3,2,4], target = 6;
 // nums = [3,3], target = 6;
 
@@ -18,8 +18,8 @@ var twoSum = function(nums, target) {
             console.log('Second Loop: ' + nums[j]);
             if (testNum + nums[j] == target && indices.length < 2) {
                 indices.push(i, j)
-                console.log(indices);
-                break;
+                // console.log(indices);
+                return indices;
             }
             
         }
