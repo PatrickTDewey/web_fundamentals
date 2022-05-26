@@ -24,7 +24,7 @@ function generateAnagrams(str, solutions = [], partial = "") {
     return solutions;
 }
 var numbers = generateAnagrams("1346");
-
+console.log(numbers);
 var operators = []
 
 function generate_operators(arr, partial = "") {
@@ -42,6 +42,7 @@ function generate_operators(arr, partial = "") {
 }
 
 generate_operators(operators)
+console.log(operators);
 
 function find_answer(numbers, operators) {
     for (let number of numbers) {
