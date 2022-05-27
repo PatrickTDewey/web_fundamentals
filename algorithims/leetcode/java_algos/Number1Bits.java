@@ -1,34 +1,25 @@
 package java_algos;
 
 public class Number1Bits {
-  // Contraint: input must be a binary number of length 32 
-  private int binaryNumber;
-  
-  private final int BINARY_LENGTH = 32; 
+	// Contraint: input must be a binary number of length 32
+	private int length;
 
-  // constructors 
-  public Number1Bits(){}; 
-  
-  public Number1Bits(int n){ 
-    this.binaryNumber = n; 
-  } 
+	// constructors
+	public Number1Bits() {
+	};
 
-  public int hammingWeight(){
-    int  count = 0;
-    int n = getBinaryNumber();
-    for  (int i = 0; i < BINARY_LENGTH; i++) {
-      // if we find a 1 in current position, increment count
-      if((n & 1) == 1) count++;
+	public int hammingWeight(int n) {
+		if (length == 32) return 0;
+		length++;
+		return (n & 1) + hammingWeight(n >>>= 1);
+	}
 
-      // shift binary number to the right, discarding binary 1s place value
-      n >>>= 1;
-
-    }
-
-    return count;
-  }
-
-  public int getBinaryNumber(){
-    return this.binaryNumber;
-  }
+	public int hammingWeightIterative(int n) {
+		int count = 0;
+		for (int i = 0; i < 32; i++) {
+			count += n & 1;
+			n >>>= 1;
+		}
+		return count;
+	}
 }
