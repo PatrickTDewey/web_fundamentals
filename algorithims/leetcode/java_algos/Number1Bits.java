@@ -21,7 +21,7 @@ public class Number1Bits {
       if((n & 1) == 1) count++;
 
       // shift binary number to the right, discarding binary 1s place value
-      n = n >> 1;
+      n >>>= 1;
 
     }
 
